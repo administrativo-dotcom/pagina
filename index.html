@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCTAGRAM | Construcción & Estructuras Metálicas</title>
+
+<style>
+:root {
+    --azul-oscuro: #0a1f44;
+    --azul: #1f4ed8;
+    --blanco: #ffffff;
+    --gris: #f4f6f9;
+    --negro: #111;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--blanco);
+    color: var(--negro);
+}
+
+/* HEADER */
+header {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+header h1 {
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--azul);
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)),
+    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero h2 {
+    font-size: 50px;
+    max-width: 800px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: var(--azul);
+    color: var(--blanco);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #163bb3;
+}
+
+/* SECCIONES */
+.section {
+    padding: 70px 60px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--azul-oscuro);
+}
+
+/* SERVICIOS */
+.services {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+    background: var(--gris);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--azul);
+}
+
+/* PROYECTOS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projects img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* NOSOTROS */
+.about {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+/* CONTACTO */
+.contact {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .services {
+        flex-direction: column;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>OCTAGRAM</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Ingeniería, Construcción y Estructuras Metálicas de Alto Nivel</h2>
+        <button>Solicitar Cotización</button>
+    </div>
+</section>
+
+<section id="servicios" class="section">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Construcción</h3>
+            <p>Proyectos civiles y obras de infraestructura con altos estándares.</p>
+        </div>
+        <div class="card">
+            <h3>Estructuras Metálicas</h3>
+            <p>Fabricación e instalación de estructuras en acero.</p>
+        </div>
+        <div class="card">
+            <h3>Diseño & Ingeniería</h3>
+            <p>Planeación y diseño estructural profesional.</p>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos" class="section">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b8b0b0a">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+    </div>
+</section>
+
+<section id="nosotros" class="section about">
+    <h2>Sobre Nosotros</h2>
+    <p>
+        En OCTAGRAM combinamos innovación, calidad y experiencia para desarrollar proyectos
+        de construcción y estructuras metálicas confiables y eficientes.
+    </p>
+</section>
+
+<section id="contacto" class="section contact">
+    <h2>Contacto</h2>
+    <p>Email: contacto@octagram.com</p>
+    <p>Tel: +57 300 000 0000</p>
+</section>
+
+<footer>
+    <p>© 2026 OCTAGRAM - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html> 
